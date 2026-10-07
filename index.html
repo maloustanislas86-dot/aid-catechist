@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil — Lumière</title>
+  <meta name="description" content="[Insérer texte ici]" />
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            electric: { DEFAULT: '#1E90FF', 300: '#7CC0FF', 400: '#4DA8FF', 500: '#1E90FF', 600: '#0A6FE0' },
+            ink: { 950: '#05070D', 900: '#0A0E1A', 800: '#111726', 700: '#1A2236' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif']
+          },
+          boxShadow: { glow: '0 0 40px -8px rgba(30,144,255,.55)' }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen bg-ink-950 font-sans text-slate-300 antialiased selection:bg-electric/30 selection:text-white">
+
+  <!-- ===== En-tête ===== -->
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur-lg">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6" aria-label="Navigation principale">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-semibold text-white">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-electric/10 text-electric ring-1 ring-electric/30">
+          <i data-lucide="flame" class="h-5 w-5"></i>
+        </span>
+        Lumière
+      </a>
+
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="index.html" aria-current="page" class="text-electric">Accueil</a></li>
+        <li><a href="ressources.html" class="transition hover:text-white">Ressources</a></li>
+        <li><a href="contact.html" class="transition hover:text-white">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="hidden items-center gap-2 rounded-full bg-electric px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-electric-600 md:inline-flex">
+        <i data-lucide="hand-heart" class="h-4 w-4"></i> Nous rejoindre
+      </a>
+
+      <button id="menu-toggle" type="button" class="rounded-lg p-2 text-slate-300 hover:bg-white/5 hover:text-white md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span data-icon-open><i data-lucide="menu" class="h-6 w-6"></i></span>
+        <span data-icon-close class="hidden"><i data-lucide="x" class="h-6 w-6"></i></span>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-white/5 px-4 pb-4 md:hidden">
+      <a href="index.html" class="block rounded-lg px-3 py-2.5 text-electric">Accueil</a>
+      <a href="ressources.html" class="block rounded-lg px-3 py-2.5 hover:bg-white/5 hover:text-white">Ressources</a>
+      <a href="contact.html" class="block rounded-lg px-3 py-2.5 hover:bg-white/5 hover:text-white">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Héros ===== -->
+    <section class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute left-1/2 top-[-10rem] h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-electric/20 blur-3xl"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,.06)_1px,transparent_0)] [background-size:28px_28px]"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32">
+        <span class="inline-flex items-center gap-2 rounded-full border border-electric/30 bg-electric/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-electric-300">
+          <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> Foi · Partage · Communauté
+        </span>
+        <h1 class="mt-8 font-display text-5xl font-semibold leading-tight text-white sm:text-7xl">
+          Nourrir l’âme,<br />
+          <span class="bg-gradient-to-r from-electric-300 via-electric to-electric-600 bg-clip-text text-transparent">éclairer le chemin</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-slate-400">[Insérer texte ici]</p>
+        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="ressources.html" class="inline-flex items-center gap-2 rounded-full bg-electric px-7 py-3 font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-electric-600">
+            Explorer les ressources <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 rounded-full border border-white/10 px-7 py-3 font-semibold text-white transition hover:border-electric/50 hover:bg-white/5">
+            <i data-lucide="mail" class="h-4 w-4"></i> Nous écrire
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Piliers ===== -->
+    <section class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <div class="mb-12 max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-widest text-electric">Notre mission</p>
+        <h2 class="mt-3 font-display text-4xl font-semibold text-white">Trois piliers pour grandir</h2>
+        <p class="mt-4 text-slate-400">[Insérer texte ici]</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="group rounded-2xl border border-white/5 bg-ink-900 p-8 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
+          <div class="mb-6 grid h-12 w-12 place-items-center rounded-xl bg-electric/10 text-electric ring-1 ring-electric/20 transition group-hover:bg-electric group-hover:text-white">
+            <i data-lucide="book-open" class="h-6 w-6"></i>
+          </div>
+          <h3 class="font-display text-2xl font-semibold text-white">Enseignement</h3>
+          <p class="mt-3 text-slate-400">[Insérer texte ici]</p>
+        </article>
+        <article class="group rounded-2xl border border-white/5 bg-ink-900 p-8 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
+          <div class="mb-6 grid h-12 w-12 place-items-center rounded-xl bg-electric/10 text-electric ring-1 ring-electric/20 transition group-hover:bg-electric group-hover:text-white">
+            <i data-lucide="moon-star" class="h-6 w-6"></i>
+          </div>
+          <h3 class="font-display text-2xl font-semibold text-white">Prière &amp; méditation</h3>
+          <p class="mt-3 text-slate-400">[Insérer texte ici]</p>
+        </article>
+        <article class="group rounded-2xl border border-white/5 bg-ink-900 p-8 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
+          <div class="mb-6 grid h-12 w-12 place-items-center rounded-xl bg-electric/10 text-electric ring-1 ring-electric/20 transition group-hover:bg-electric group-hover:text-white">
+            <i data-lucide="users" class="h-6 w-6"></i>
+          </div>
+          <h3 class="font-display text-2xl font-semibold text-white">Communauté</h3>
+          <p class="mt-3 text-slate-400">[Insérer texte ici]</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Catégories de ressources (liens filtrés) ===== -->
+    <section class="border-y border-white/5 bg-ink-900/50">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div class="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest text-electric">Bibliothèque</p>
+            <h2 class="mt-3 font-display text-4xl font-semibold text-white">Parcourir par catégorie</h2>
+          </div>
+          <a href="ressources.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-electric hover:text-electric-300">
+            Tout voir <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <a href="ressources.html?categorie=livres" class="group flex flex-col gap-4 rounded-2xl border border-white/5 bg-ink-800 p-6 transition hover:border-electric/40">
+            <i data-lucide="library" class="h-7 w-7 text-electric"></i>
+            <span class="font-semibold text-white">Livres</span>
+            <span class="text-sm text-slate-500 group-hover:text-slate-400">[Insérer texte ici]</span>
+          </a>
+          <a href="ressources.html?categorie=audio" class="group flex flex-col gap-4 rounded-2xl border border-white/5 bg-ink-800 p-6 transition hover:border-electric/40">
+            <i data-lucide="headphones" class="h-7 w-7 text-electric"></i>
+            <span class="font-semibold text-white">Audio</span>
+            <span class="text-sm text-slate-500 group-hover:text-slate-400">[Insérer texte ici]</span>
+          </a>
+          <a href="ressources.html?categorie=video" class="group flex flex-col gap-4 rounded-2xl border border-white/5 bg-ink-800 p-6 transition hover:border-electric/40">
+            <i data-lucide="play-circle" class="h-7 w-7 text-electric"></i>
+            <span class="font-semibold text-white">Vidéo</span>
+            <span class="text-sm text-slate-500 group-hover:text-slate-400">[Insérer texte ici]</span>
+          </a>
+          <a href="ressources.html?categorie=articles" class="group flex flex-col gap-4 rounded-2xl border border-white/5 bg-ink-800 p-6 transition hover:border-electric/40">
+            <i data-lucide="file-text" class="h-7 w-7 text-electric"></i>
+            <span class="font-semibold text-white">Articles</span>
+            <span class="text-sm text-slate-500 group-hover:text-slate-400">[Insérer texte ici]</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Citation ===== -->
+    <section class="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6">
+      <i data-lucide="quote" class="mx-auto h-10 w-10 text-electric/60"></i>
+      <blockquote class="mt-6 font-display text-3xl italic leading-snug text-white sm:text-4xl">
+        « [Insérer citation ici] »
+      </blockquote>
+      <p class="mt-6 text-sm uppercase tracking-widest text-slate-500">— [Insérer source ici]</p>
+    </section>
+
+    <!-- ===== Appel à l’action ===== -->
+    <section class="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+      <div class="relative overflow-hidden rounded-3xl border border-electric/30 bg-gradient-to-br from-electric/20 via-ink-900 to-ink-900 p-10 sm:p-14">
+        <div class="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-electric/30 blur-3xl"></div>
+        <div class="relative flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+          <div class="max-w-xl">
+            <h2 class="font-display text-4xl font-semibold text-white">Rejoignez la communauté</h2>
+            <p class="mt-3 text-slate-300">[Insérer texte ici]</p>
+          </div>
+          <a href="contact.html" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-ink-950 transition hover:bg-electric-300">
+            Prendre contact <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pied de page ===== -->
+  <footer class="border-t border-white/5">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-500 sm:flex-row sm:px-6">
+      <p>© <span data-year></span> Lumière. Tous droits réservés.</p>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-electric">Accueil</a>
+        <a href="ressources.html" class="hover:text-electric">Ressources</a>
+        <a href="contact.html" class="hover:text-electric">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

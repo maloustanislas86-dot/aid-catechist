@@ -33,7 +33,7 @@
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
-<body class="min-h-screen bg-ink-950 font-sans text-slate-300 antialiased selection:bg-electric/30 selection:text-white">
+<body class="min-h-screen bg-ink-950 font-sans text-slate-300 antialiased selection:bg-electric/30 selection:text-white   bg-ink-950 text-slate-100 font-sans antialiased p-6 md:p-12">
 
   <!-- ===== En-tête ===== -->
   <header class="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur-lg">
@@ -68,7 +68,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="max-w-3xl mx-auto">
     <!-- ===== Titre de page ===== -->
     <section class="relative overflow-hidden border-b border-white/5">
       <div class="pointer-events-none absolute left-1/2 top-[-12rem] h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-electric/15 blur-3xl"></div>
@@ -119,26 +119,52 @@
           <div class="flex items-start gap-3">
             <i data-lucide="quote" class="h-5 w-5 text-electric-300 shrink-0 mt-0.5"></i>
             <p class="text-sm font-medium italic text-electric-300">
-              « Pour la plus grande gloire de Dieu » — Un appel à l'excellence et au dépassement de soi dans chaque action du quotidien.
+              « Pour la plus grande gloire de Dieu »
             </p>
           </div>
+        </div> 
+        
+    <!-- Bouton Retour -->
+    <a href="../index.html" class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-electric mb-8 transition">
+      <i data-lucide="arrow-left" class="h-4 w-4"><span>Retour aux articles</span></i>
+    </a>
+
+    <!-- En-tête de l'article -->
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300 mb-4">
+        <i data-lucide="file-text" class="h-3.5 w-3.5"></i> Article
+      </span>
+      <h1 class="font-display text-4xl font-bold text-white mb-3">Guides</h1>
+      <p class="text-slate-400 text-sm">8 min de lecture</p>
+    </header>
+
+    <!-- Contenu de l'article (Zone de texte proposée) -->
+    <article class="space-y-6">
+      <!-- Encadré de mise en valeur -->
+      <div class="rounded-xl border border-electric/30 bg-electric/10 p-5">
+        <div class="flex items-start gap-3">
+          <i data-lucide="quote" class="h-5 w-5 text-electric-300 shrink-0 mt-0.5"></i>
+          <p class="text-sm font-medium italic text-electric-300">
+            « Pour la plus grande gloire de Dieu » — Un appel à l'excellence et au dépassement de soi dans chaque action du quotidien.
+          </p>
         </div>
+      </div>
 
-        <!-- Corps du texte -->
-        <div class="space-y-4 text-slate-300 leading-relaxed text-sm md:text-base">
-          <p>
-            L'engagement envers une mission plus grande que soi demande de la clarté, de la discipline et une vision ancrée dans des valeurs profondes. Dans ce guide, nous explorons les principes fondamentaux qui permettent de transformer la pensée en action concrète.
-          </p>
+          <!-- Corps du texte -->
+          <div class="space-y-4 text-slate-300 leading-relaxed text-sm md:text-base">
+            <p>
+              L'engagement envers une mission plus grande que soi demande de la clarté, de la discipline et une vision ancrée dans des valeurs profondes. Dans ce guide, nous explorons les principes fondamentaux qui permettent de transformer la pensée en action concrète.
+            </p>
 
-          <h2 class="font-display text-xl font-semibold text-white pt-4">1. La clarté de l'intention</h2>
-          <p>
-            Avant d'entreprendre toute action, il est essentiel de définir le mobile qui vous anime. Une intention pure sert d'ancrage face aux distractions et aux obstacles du quotidien.
-          </p>
+            <h2 class="font-display text-xl font-semibold text-white pt-4">1. La clarté de l'intention</h2>
+            <p>
+              Avant d'entreprendre toute action, il est essentiel de définir le mobile qui vous anime. Une intention pure sert d'ancrage face aux distractions et aux obstacles du quotidien.
+            </p>
 
-          <h2 class="font-display text-xl font-semibold text-white pt-4">2. L'excellence au quotidien</h2>
-          <p>
-            Rechercher la qualité dans les plus petits détails n'est pas une quête de perfectionnisme stérile, mais un acte de respect envers son travail et envers la communauté.
-          </p>
+            <h2 class="font-display text-xl font-semibold text-white pt-4">2. L'excellence au quotidien</h2>
+            <p>
+              Rechercher la qualité dans les plus petits détails n'est pas une quête de perfectionnisme stérile, mais un acte de respect envers son travail et envers la communauté.
+            </p>
 
           <!-- Bloc note / Information -->
           <div class="rounded-xl bg-white/5 border border-white/10 p-5 mt-6">

@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACJP2Kahone</title>
+  <meta name="description" content="[Insérer texte ici]" />
+  <!-- Line for the SVG favicon -->
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            electric: { DEFAULT: '#1E90FF', 300: '#7CC0FF', 400: '#4DA8FF', 500: '#1E90FF', 600: '#0A6FE0' },
+            ink: { 950: '#05070D', 900: '#0A0E1A', 800: '#111726', 700: '#1A2236' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif']
+          },
+          boxShadow: { glow: '0 0 40px -8px rgba(30,144,255,.55)' }
+        }
+      }
+    };
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="min-h-screen bg-ink-950 font-sans text-slate-300 antialiased selection:bg-electric/30 selection:text-white">
+
+  <!-- ===== En-tête ===== -->
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur-lg">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6" aria-label="Navigation principale">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-semibold text-white">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-electric/10 text-electric ring-1 ring-electric/30">
+          <img src="image/christ_icon.webp" alt="Christ" class="h-8 w-8 object-contain" />
+        </span>
+        Formation de notre Foi
+      </a>
+
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="index.html" class="transition hover:text-white">Accueil</a></li>
+        <li><a href="ressources.html" aria-current="page" class="text-electric">Ressources</a></li>
+        <li><a href="contact.html" class="transition hover:text-white">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="hidden items-center gap-2 rounded-full bg-electric px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-electric-600 md:inline-flex">
+        <i data-lucide="hand-heart" class="h-4 w-4"></i> Nous rejoindre
+      </a>
+
+      <button id="menu-toggle" type="button" class="rounded-lg p-2 text-slate-300 hover:bg-white/5 hover:text-white md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span data-icon-open><i data-lucide="menu" class="h-6 w-6"></i></span>
+        <span data-icon-close class="hidden"><i data-lucide="x" class="h-6 w-6"></i></span>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-white/5 px-4 pb-4 md:hidden">
+      <a href="index.html" class="block rounded-lg px-3 py-2.5 hover:bg-white/5 hover:text-white">Accueil</a>
+      <a href="ressources.html" class="block rounded-lg px-3 py-2.5 text-electric">Ressources</a>
+      <a href="contact.html" class="block rounded-lg px-3 py-2.5 hover:bg-white/5 hover:text-white">Contact</a>
+    </div>
+  </header>
+
+    <!-- ===== Titre de page ===== -->
+    <main class="max-w-3xl mx-auto">
+    <!-- Bouton Retour -->
+    <a href="../index.html" class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-electric mb-8 transition">
+      <i data-lucide="arrow-left" class="h-4 w-4"><span>Retour aux articles</span></i>
+    </a>
+
+    <!-- En-tête de l'article -->
+    <header class="mb-8">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300 mb-4">
+        <i data-lucide="file-text" class="h-3.5 w-3.5"></i> Article
+      </span>
+      <h1 class="font-display text-4xl font-bold text-white mb-3">Guides</h1>
+      <p class="text-slate-400 text-sm">8 min de lecture</p>
+    </header>
+
+    <!-- Contenu de l'article (Zone de texte proposée) -->
+    <article class="space-y-6">
+      <!-- Encadré de mise en valeur -->
+      <div class="rounded-xl border border-electric/30 bg-electric/10 p-5">
+        <div class="flex items-start gap-3">
+          <i data-lucide="quote" class="h-5 w-5 text-electric-300 shrink-0 mt-0.5"></i>
+          <p class="text-sm font-medium italic text-electric-300">
+            « Pour la plus grande gloire de Dieu » — Un appel à l'excellence et au dépassement de soi dans chaque action du quotidien.
+          </p>
+        </div>
+      </div>
+
+      <!-- Corps du texte -->
+      <div class="space-y-4 text-slate-300 leading-relaxed text-sm md:text-base">
+        <p>
+          L'engagement envers une mission plus grande que soi demande de la clarté, de la discipline et une vision ancrée dans des valeurs profondes. Dans ce guide, nous explorons les principes fondamentaux qui permettent de transformer la pensée en action concrète.
+        </p>
+
+        <h2 class="font-display text-xl font-semibold text-white pt-4">1. La clarté de l'intention</h2>
+        <p>
+          Avant d'entreprendre toute action, il est essentiel de définir le mobile qui vous anime. Une intention pure sert d'ancrage face aux distractions et aux obstacles du quotidien.
+        </p>
+
+        <h2 class="font-display text-xl font-semibold text-white pt-4">2. L'excellence au quotidien</h2>
+        <p>
+          Rechercher la qualité dans les plus petits détails n'est pas une quête de perfectionnisme stérile, mais un acte de respect envers son travail et envers la communauté.
+        </p>
+
+        <!-- Bloc note / Information -->
+        <div class="rounded-xl bg-white/5 border border-white/10 p-5 mt-6">
+          <div class="flex items-center gap-2 font-semibold text-white mb-2">
+            <i data-lucide="bookmark" class="h-4 w-4 text-electric"></i>
+            <span>À retenir</span>
+          </div>
+          <p class="text-xs md:text-sm text-slate-400">
+            La régularité prévaut toujours sur l'intensité ponctuelle. Prenez le temps de relire ces principes chaque semaine.
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Initialisation des icônes Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <footer class="border-t border-white/5">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-500 sm:flex-row sm:px-6">
+      <p>© <span data-year></span> Formation de notre Foi. Tous droits réservés.</p>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-electric">Accueil</a>
+        <a href="ressources.html" class="hover:text-electric">Ressources</a>
+        <a href="contact.html" class="hover:text-electric">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
 

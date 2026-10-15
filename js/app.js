@@ -317,13 +317,31 @@
   });
 })();
 
+/* Articles */
 document.querySelectorAll('.open-article').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
+
     const title = link.getAttribute('data-title');
-    const content = link.getAttribute('data-content');
+    const templateId = link.getAttribute('data-template-id');
+    const template = document.getElementById(templateId);
+
+    modalTitle.textContent = title;
     
-    // Fonction à adapter selon votre structure de modale HTML existante
-    ouvrirModal(title, content); 
+    // Si un template existe, on injecte son contenu, sinon contenu par défaut
+    if (template) {
+      modalContent.innerHTML = template.innerHTML;
+    } else {
+      modalContent.innerHTML = "<p>Contenu indisponible.</p>";
+    }
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Génération des icônes Lucide dans le contenu du modal (quote, bookmark, etc.)
+    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+      lucide.createIcons();
+    }
   });
 });
+

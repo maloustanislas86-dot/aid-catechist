@@ -318,7 +318,7 @@
 })();
 
 /* Articles */
-/*document.querySelectorAll('.open-article').forEach(link => {
+document.querySelectorAll('.open-article').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -343,5 +343,5 @@
       lucide.createIcons();
     }
   });
-});*/
+});
 

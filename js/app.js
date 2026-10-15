@@ -316,3 +316,14 @@
     initContactForm();
   });
 })();
+
+document.querySelectorAll('.open-article').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const title = link.getAttribute('data-title');
+    const content = link.getAttribute('data-content');
+    
+    // Fonction à adapter selon votre structure de modale HTML existante
+    ouvrirModal(title, content); 
+  });
+});

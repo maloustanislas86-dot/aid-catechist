@@ -134,51 +134,40 @@
           <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300"><i data-lucide="play" class="h-4 w-4"></i> Écouter</a>
         </article>
 
-        <!-- <article data-category="video" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
+        <!-- Votre carte HTML stylisée avec Tailwind CSS -->
+        <!-- CARTE 1 : Sainte Mère Térèsa de Calcutta -->
+        <article data-category="video" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
           <div class="mb-5 flex items-center justify-between">
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300"><i data-lucide="play-circle" class="h-3.5 w-3.5"></i> Vidéo</span>
-            <span class="text-xs text-slate-500">1 h 12</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300">
+              <i data-lucide="play-circle" class="h-3.5 w-3.5"></i> Vidéo
+            </span>
+            <span class="text-xs text-slate-500">15:35</span>
           </div>
-          <h3 class="font-display text-2xl font-semibold text-white">Sainte Mère Térèsa de Calcutta</h3>
-          <p class="mt-2 flex-1 text-sm text-slate-400">Sainte patrone des missions, des pauvres, de l'amour et de diverses institutions éducatives et des lieux de culte.</p>
-          <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300"><i data-lucide="play" class="h-4 w-4"></i> Regarder</a>
-        </article> -->
-
-       <!-- Votre carte HTML stylisée avec Tailwind CSS -->
- <!-- CARTE 1 : Sainte Mère Térèsa de Calcutta -->
-  <article data-category="video" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
-    <div class="mb-5 flex items-center justify-between">
-      <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300">
-        <i data-lucide="play-circle" class="h-3.5 w-3.5"></i> Vidéo
-      </span>
-      <span class="text-xs text-slate-500">1 h 12</span>
-    </div>
-    <h3 class="font-display text-2xl font-semibold text-white">Sainte Mère Térèsa de Calcutta</h3>
-    <p class="mt-2 flex-1 text-sm text-slate-400">Sainte patrone des missions, des pauvres, de l'amour et de diverses institutions éducatives.</p>
+          
+        <h3 class="font-display text-2xl font-semibold text-white">Sainte Mère Térèsa de Calcutta</h3>
+        <p class="mt-2 flex-1 text-sm text-slate-400">Sainte patrone des missions, des pauvres, de l'amour et de diverses institutions éducatives.</p>
     
-    <!-- BOUTON : Remplacez ID_YOUTUBE_1 par le vrai identifiant YouTube de votre vidéo -->
-    <button data-video-url="https://www.youtube.com/embed/tLFHZN9rQrY" class="btn-regarder mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-0 text-left">
-      <i data-lucide="play" class="h-4 w-4"></i> Regarder
-    </button>
+        <!-- BOUTON : Remplacez ID_YOUTUBE_1 par le vrai identifiant YouTube de votre vidéo -->
+        <button data-video-url="https://www.youtube.com/embed/tLFHZN9rQrY" class="btn-regarder mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-0 text-left">
+          <i data-lucide="play" class="h-4 w-4"></i> Regarder
+        </button>
+      </article>
 
-  </article>
-
-<!-- LA BOÎTE MODALE YOUTUBE (Unique pour toute la page, cachée par défaut) -->
-<div id="video-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-  <div class="relative w-full max-w-4xl bg-ink-900 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+      <!-- LA BOÎTE MODALE YOUTUBE (Unique pour toute la page, cachée par défaut) -->
+     <!-- <div id="video-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="relative w-full max-w-4xl bg-ink-900 rounded-2xl overflow-hidden border border-white/10 shadow-2xl"> -->
     
-    <!-- Bouton Fermer (icône X) -->
-    <button id="btn-fermer" class="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/40 hover:bg-black/60 p-2 rounded-full cursor-pointer transition">
-      <i data-lucide="x" class="h-5 w-5"></i>
-    </button>
+            <!-- Bouton Fermer (icône X) -->
+           <!-- <button id="btn-fermer" class="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/40 hover:bg-black/60 p-2 rounded-full cursor-pointer transition">
+              <i data-lucide="x" class="h-5 w-5"></i>
+            </button> -->
 
-    <div class="aspect-video w-full bg-black">
-      <!-- L'iframe reçoit l'adresse de l'intégration officielle YouTube -->
-      <iframe id="lecteur-video" src="" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-
-  </div>
-</div>
+        <!--  <div class="aspect-video w-full bg-black"> -->
+           <!-- L'iframe reçoit l'adresse de l'intégration officielle YouTube -->
+           <!-- <iframe id="lecteur-video" src="" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> -->
 
         <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
           <div class="mb-5 flex items-center justify-between">
@@ -281,6 +270,23 @@
           <p class="mt-2 flex-1 text-sm text-slate-400">[Insérer texte ici]</p>
           <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300"><i data-lucide="download" class="h-4 w-4"></i> Télécharger</a>
         </article>
+
+         <!-- LA BOÎTE MODALE YOUTUBE (Unique pour toute la page, cachée par défaut) -->
+      <div id="video-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="relative w-full max-w-4xl bg-ink-900 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+    
+            <!-- Bouton Fermer (icône X) -->
+            <button id="btn-fermer" class="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/40 hover:bg-black/60 p-2 rounded-full cursor-pointer transition">
+              <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+
+          <div class="aspect-video w-full bg-black">
+           <!-- L'iframe reçoit l'adresse de l'intégration officielle YouTube -->
+            <iframe id="lecteur-video" src="" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
       </div>
 
       <!-- ===== État vide ===== -->

@@ -346,30 +346,19 @@
 });*/
 
 /* ----------------- Articles ----------------- */
-const modal = document.getElementById('textModal');
-  const openBtn = document.getElementById('openModalBtn');
-  const closeBtn = document.getElementById('closeModalBtn');
+function toggleModal(show) {
+    const modal = document.getElementById('textModal');
+    if (show) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
 
-  // Ouvrir la modale au clic sur "Lire"
-  openBtn.addEventListener('click', () => {
-    modal.showModal();
-  });
-
-  // Fermer la modale au clic sur la croix
-  closeBtn.addEventListener('click', () => {
-    modal.close();
-  });
-
-  // Fermer la modale si on clique à l'extérieur (sur le fond sombre)
-  modal.addEventListener('click', (e) => {
-    const dialogDimensions = modal.getBoundingClientRect();
-    if (
-      e.clientX < dialogDimensions.left ||
-      e.clientX > dialogDimensions.right ||
-      e.clientY < dialogDimensions.top ||
-      e.clientY > dialogDimensions.bottom
-    ) {
-      modal.close();
+  // Fermer la modale si on clique sur l'arrière-plan noir
+  document.getElementById('textModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      toggleModal(false);
     }
   });
 

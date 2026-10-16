@@ -350,32 +350,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnRegarder = document.getElementById("btn-regarder");
   const videoModal = document.getElementById("video-modal");
   const btnFermer = document.getElementById("btn-fermer");
-  const lecteurVideo = document.getElementById("lecteur-video");
+  const iframeVideo = document.getElementById("lecteur-video");
 
-  // 1. Ouvrir la modale et lancer la vidéo
+  // 1. Action à l'ouverture : afficher la modale et charger l'iframe
   btnRegarder.addEventListener("click", () => {
-    const videoUrl = btnRegarder.getAttribute("data-video");
+    const videoId = btnRegarder.getAttribute("data-video-id");
     
-    lecteurVideo.src = videoUrl; // Assigne la source de la vidéo
-    videoModal.classList.remove("hidden"); // Affiche la modale
-    lecteurVideo.play(); // Lance la lecture
+    // Construction de l'URL Google Drive au format d'intégration
+    iframeVideo.src = `https://google.com{videoId}/preview`;
+    
+    // Affiche la fenêtre modale
+    videoModal.classList.remove("hidden");
   });
 
-  // 2. Fonction pour fermer la modale et stopper la vidéo
+  // 2. Action à la fermeture : masquer la modale et détruire la source
   const fermerModale = () => {
-    videoModal.classList.add("hidden"); // Cache la modale
-    lecteurVideo.pause(); // Met la vidéo en pause
-    lecteurVideo.src = ""; // Vide la source pour stopper totalement le chargement
+    videoModal.classList.add("hidden");
+    iframeVideo.src = ""; // Vide l'iframe pour stopper la vidéo en arrière-plan
   };
 
-  // Fermeture au clic sur la croix
+  // Fermeture au clic sur le bouton 'X'
   btnFermer.addEventListener("click", fermerModale);
 
-  // Fermeture au clic à l'extérieur de la vidéo (sur le fond noir)
+  // Fermeture au clic n'importe où à l'extérieur de la vidéo (sur l'arrière-plan noir)
   videoModal.addEventListener("click", (e) => {
     if (e.target === videoModal) {
       fermerModale();
     }
   });
 });
-

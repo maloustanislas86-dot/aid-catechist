@@ -346,7 +346,7 @@ document.querySelectorAll('.open-article').forEach(link => {
 });
 
 // JavaScript Video
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
   const videoModal = document.getElementById("video-modal");
   const btnFermer = document.getElementById("btn-fermer");
@@ -367,30 +367,5 @@ document.querySelectorAll('.open-article').forEach(link => {
 
   btnFermer.addEventListener("click", fermerModale);
   videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
-});*/
-
-document.addEventListener("DOMContentLoaded", () => {
-  const boutonsRegarder = document.querySelectorAll(".btn-regarder");
-  const videoModal = document.getElementById("video-modal");
-  const btnFermer = document.getElementById("btn-fermer");
-  const lecteurVideo = document.getElementById("lecteur-video"); // Cible la balise video
-
-  boutonsRegarder.forEach((bouton) => {
-    bouton.addEventListener("click", () => {
-      lecteurVideo.src = bouton.getAttribute("data-video-url");
-      videoModal.classList.remove("hidden");
-      lecteurVideo.play(); // Lance la vidéo automatiquement
-    });
-  });
-
-  const fermerModale = () => {
-    videoModal.classList.add("hidden");
-    lecteurVideo.pause(); // Met en pause
-    lecteurVideo.src = ""; // Coupe le chargement
-  };
-
-  btnFermer.addEventListener("click", fermerModale);
-  videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
 });
-
 

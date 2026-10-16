@@ -318,7 +318,7 @@
 })();
 
 /* -------------- Articles --------------- */
-document.querySelectorAll('.open-article').forEach(link => {
+/*document.querySelectorAll('.open-article').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -343,9 +343,37 @@ document.querySelectorAll('.open-article').forEach(link => {
       lucide.createIcons();
     }
   });
-});
+});*/
 
-/* -------------- JavaScript Video ------------*/
+/* ----------------- Articles ----------------- */
+const modal = document.getElementById('textModal');
+  const openBtn = document.getElementById('openModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+
+  // Ouvrir la modale au clic sur "Lire"
+  openBtn.addEventListener('click', () => {
+    modal.showModal();
+  });
+
+  // Fermer la modale au clic sur la croix
+  closeBtn.addEventListener('click', () => {
+    modal.close();
+  });
+
+  // Fermer la modale si on clique à l'extérieur (sur le fond sombre)
+  modal.addEventListener('click', (e) => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      modal.close();
+    }
+  });
+
+/* -------------- Video ------------*/
 document.addEventListener("DOMContentLoaded", () => {
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
   const videoModal = document.getElementById("video-modal");

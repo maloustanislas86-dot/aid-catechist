@@ -350,22 +350,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
   const videoModal = document.getElementById("video-modal");
   const btnFermer = document.getElementById("btn-fermer");
-  const iframeVideo = document.getElementById("lecteur-video");
+  const iframeVideo = document.getElementById("lecteur-video"); // Cible l'iframe
 
   boutonsRegarder.forEach((bouton) => {
     bouton.addEventListener("click", () => {
-      // Récupère l'URL complète du HTML et l'injecte directement dans l'iframe
+      // Récupère l'URL complète définie dans le HTML et l'applique à l'iframe
       iframeVideo.src = bouton.getAttribute("data-video-url");
+      
+      // Affiche la modale
       videoModal.classList.remove("hidden");
     });
   });
 
   const fermerModale = () => {
     videoModal.classList.add("hidden");
-    iframeVideo.src = ""; 
+    iframeVideo.src = ""; // Vide l'iframe pour couper le streaming et le son immédiatement
   };
 
   btnFermer.addEventListener("click", fermerModale);
-  videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
+  videoModal.addEventListener("click", (e) => {
+    if (e.target === videoModal) {
+      fermerModale();
+    }
+  });
 });
 

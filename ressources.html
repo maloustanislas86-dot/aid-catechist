@@ -172,37 +172,90 @@
         </article>
 
         <!-- Article 1 -->
-        <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
+       <!-- <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
           <div class="mb-5 flex items-center justify-between"> 
             <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300"><i data-lucide="file-text" class="h-3.5 w-3.5"></i> Article</span> 
             <span class="text-xs text-slate-500">1 min de lecture</span> 
           </div> 
           <h3 class="font-display text-2xl font-semibold text-white">Guides</h3> 
-          <p class="mt-2 flex-1 text-sm text-slate-400">« Pour la plus grande gloire de Dieu »</p> 
+          <p class="mt-2 flex-1 text-sm text-slate-400">« Pour la plus grande gloire de Dieu »</p> -->
           
           <!-- Bouton avec une fonction JS directe "onclick" pour éliminer les bugs de script -->
-          <button onclick="toggleModal(true)" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left">
+         <!-- <button onclick="toggleModal(true)" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left">
             <i data-lucide="arrow-right" class="h-4 w-4"></i> Lire
           </button> 
-        </article>
+        </article> -->
         
         <!-- La fenêtre modale (Modifiée en DIV classique, cachée via 'hidden') -->
-        <div id="textModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+       <!-- <div id="textModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"> -->
           <!-- Conteneur de la boîte -->
-          <div class="relative rounded-2xl border border-white/10 bg-ink-900 p-6 text-white max-w-md w-full shadow-2xl">
+         <!-- <div class="relative rounded-2xl border border-white/10 bg-ink-900 p-6 text-white max-w-md w-full shadow-2xl"> -->
             <!-- Entête -->
-            <div class="flex justify-between items-center mb-4">
+           <!-- <div class="flex justify-between items-center mb-4">
               <h3 class="text-xl font-bold text-electric-300">Guides</h3>
               <button onclick="toggleModal(false)" class="text-slate-400 hover:text-white cursor-pointer bg-transparent border-none text-xl p-1">✕</button>
-            </div>
+            </div> -->
             <!-- Contenu texte -->
-            <div class="text-sm text-slate-300 space-y-3">
+           <!-- <div class="text-sm text-slate-300 space-y-3">
               <p><strong>« Pour la plus grande gloire de Dieu »</strong></p>
               <p>Maintenant, nous avons les textes fournis par l'Église pour chaque classe. Nous sommes libres d'enseigner tout ce qui peut être utile aux enfants afin qu'ils puissent apprendre à connaître Jésus à travers une expérience personnelle de sa présence constante dans leur vie, de sorte qu'ils puissent aimer et servir Jésus toujours et partout.</p>
               <p>Chers enseignants, préparez vos cours pour chaque dimanche. Le dimanche, lorsque vous enseignez, veuillez écrire une remarque sur la façon dont et dans quelle mesure vous avez pu traiter ce que vous aviez préparé. Les cahiers d'exercices de 200 pages sont destinés à ce travail.</p>
             </div>
           </div>
+        </div> -->
+
+        <!-- Article 1 -->
+        <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
+          <div class="mb-5 flex items-center justify-between"> 
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300">Article</span> 
+            <span class="text-xs text-slate-500">1 min de lecture</span> 
+          </div> 
+          <h3 class="font-display text-2xl font-semibold text-white">Guides</h3> 
+          <p class="mt-2 flex-1 text-sm text-slate-400">« Pour la plus grande gloire de Dieu »</p> 
+          
+          <!-- Bouton avec les données de l'article 1 stockées dans des attributs "data-" -->
+          <button 
+            class="open-modal-btn mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left"
+            data-title="Guides"
+            data-content="&lt;p&gt;&lt;strong&gt;« Ad maiorem Dei gloriam »&lt;/strong&gt; est la devise des Jésuites.&lt;/p&gt;&lt;p&gt;Ce guide vous explique l'histoire de Saint Ignace de Loyola.&lt;/p&gt;">
+            Lire
+          </button> 
+        </article>
+      
+        <!-- Article 2 -->
+        <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
+          <div class="mb-5 flex items-center justify-between"> 
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300">Article</span> 
+            <span class="text-xs text-slate-500">1 min de lecture</span> 
+          </div> 
+          <h3 class="font-display text-2xl font-semibold text-white">Dévotions</h3> 
+          <p class="mt-2 flex-1 text-sm text-slate-400">« Le tabernacle où Jésus est présent »</p> 
+          
+          <!-- Bouton avec les données de l'article 2 -->
+          <button 
+            class="open-modal-btn mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left"
+            data-title="Dévotions"
+            data-content="&lt;p&gt;Le style baroque a été fortement propulsé par la Contre-Réforme.&lt;/p&gt;&lt;p&gt;Les détails dorés et la lumière y jouent un rôle crucial.&lt;/p&gt;">
+            Lire
+          </button> 
+        </article>
+      
+      </div>
+      
+      <!-- LA FENÊTRE MODALE UNIQUE POUR TOUT LE SITE -->
+      <div id="globalModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="relative rounded-2xl border border-white/10 bg-ink-900 p-6 text-white max-w-md w-full shadow-2xl">
+          <!-- Entête dynamique -->
+          <div class="flex justify-between items-center mb-4">
+            <h3 id="modalTitle" class="text-xl font-bold text-electric-300">Articles</h3>
+            <button onclick="closeGlobalModal()" class="text-slate-400 hover:text-white cursor-pointer bg-transparent border-none text-xl p-1">✕</button>
+          </div>
+          <!-- Contenu dynamique -->
+          <div id="modalContent" class="text-sm text-slate-300 space-y-3">
+            <!-- Le texte HTML de l'article s'injectera ici -->
+          </div>
         </div>
+      </div>
           
         <article data-category="livres" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
           <div class="mb-5 flex items-center justify-between">

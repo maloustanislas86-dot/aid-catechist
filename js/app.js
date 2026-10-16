@@ -347,40 +347,6 @@ document.querySelectorAll('.open-article').forEach(link => {
 
 // JavaScript Video
 /*document.addEventListener("DOMContentLoaded", () => {
-  const btnRegarder = document.getElementById("btn-regarder");
-  const videoModal = document.getElementById("video-modal");
-  const btnFermer = document.getElementById("btn-fermer");
-  const iframeVideo = document.getElementById("lecteur-video");
-
-  // 1. Action à l'ouverture : afficher la modale et charger l'iframe
-  btnRegarder.addEventListener("click", () => {
-    const videoId = btnRegarder.getAttribute("data-video-id");
-    
-    // Construction de l'URL Google Drive au format d'intégration
-  iframeVideo.src = `https://google.com{videoId}/preview`;
-    
-    // Affiche la fenêtre modale
-    videoModal.classList.remove("hidden");
-  });
-
-  // 2. Action à la fermeture : masquer la modale et détruire la source
-  const fermerModale = () => {
-    videoModal.classList.add("hidden");
-    iframeVideo.src = ""; // Vide l'iframe pour stopper la vidéo en arrière-plan
-  };
-
-  // Fermeture au clic sur le bouton 'X'
-  btnFermer.addEventListener("click", fermerModale);
-
-  // Fermeture au clic n'importe où à l'extérieur de la vidéo (sur l'arrière-plan noir)
-  videoModal.addEventListener("click", (e) => {
-    if (e.target === videoModal) {
-      fermerModale();
-    }
-  });
-});*/
-
-document.addEventListener("DOMContentLoaded", () => {
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
   const videoModal = document.getElementById("video-modal");
   const btnFermer = document.getElementById("btn-fermer");
@@ -401,5 +367,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnFermer.addEventListener("click", fermerModale);
   videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const boutonsRegarder = document.querySelectorAll(".btn-regarder");
+  const videoModal = document.getElementById("video-modal");
+  const btnFermer = document.getElementById("btn-fermer");
+  const lecteurVideo = document.getElementById("lecteur-video"); // Cible la balise video
+
+  boutonsRegarder.forEach((bouton) => {
+    bouton.addEventListener("click", () => {
+      lecteurVideo.src = bouton.getAttribute("data-video-url");
+      videoModal.classList.remove("hidden");
+      lecteurVideo.play(); // Lance la vidéo automatiquement
+    });
+  });
+
+  const fermerModale = () => {
+    videoModal.classList.add("hidden");
+    lecteurVideo.pause(); // Met en pause
+    lecteurVideo.src = ""; // Coupe le chargement
+  };
+
+  btnFermer.addEventListener("click", fermerModale);
+  videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
 });
+
 

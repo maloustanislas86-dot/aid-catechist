@@ -317,7 +317,7 @@
   });
 })();
 
-/* Articles */
+/* -------------- Articles --------------- */
 document.querySelectorAll('.open-article').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -345,7 +345,7 @@ document.querySelectorAll('.open-article').forEach(link => {
   });
 });
 
-// JavaScript Video
+/* -------------- JavaScript Video ------------*/
 document.addEventListener("DOMContentLoaded", () => {
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
   const videoModal = document.getElementById("video-modal");

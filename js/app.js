@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const videoId = btnRegarder.getAttribute("data-video-id");
     
     // Construction de l'URL Google Drive au format d'intégration
-    iframeVideo.src = "https://google.com" + videoId + "/preview";
+  iframeVideo.src = `https://google.com{videoId}/preview`;
     
     // Affiche la fenêtre modale
     videoModal.classList.remove("hidden");

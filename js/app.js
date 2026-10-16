@@ -345,3 +345,37 @@ document.querySelectorAll('.open-article').forEach(link => {
   });
 });
 
+// JavaScript Video
+document.addEventListener("DOMContentLoaded", () => {
+  const btnRegarder = document.getElementById("btn-regarder");
+  const videoModal = document.getElementById("video-modal");
+  const btnFermer = document.getElementById("btn-fermer");
+  const lecteurVideo = document.getElementById("lecteur-video");
+
+  // 1. Ouvrir la modale et lancer la vidéo
+  btnRegarder.addEventListener("click", () => {
+    const videoUrl = btnRegarder.getAttribute("data-video");
+    
+    lecteurVideo.src = videoUrl; // Assigne la source de la vidéo
+    videoModal.classList.remove("hidden"); // Affiche la modale
+    lecteurVideo.play(); // Lance la lecture
+  });
+
+  // 2. Fonction pour fermer la modale et stopper la vidéo
+  const fermerModale = () => {
+    videoModal.classList.add("hidden"); // Cache la modale
+    lecteurVideo.pause(); // Met la vidéo en pause
+    lecteurVideo.src = ""; // Vide la source pour stopper totalement le chargement
+  };
+
+  // Fermeture au clic sur la croix
+  btnFermer.addEventListener("click", fermerModale);
+
+  // Fermeture au clic à l'extérieur de la vidéo (sur le fond noir)
+  videoModal.addEventListener("click", (e) => {
+    if (e.target === videoModal) {
+      fermerModale();
+    }
+  });
+});
+

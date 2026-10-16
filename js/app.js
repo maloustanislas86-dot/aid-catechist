@@ -354,31 +354,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   boutonsRegarder.forEach((bouton) => {
     bouton.addEventListener("click", () => {
-      // Récupère l'identifiant YouTube écrit dans la carte HTML
-      const youtubeId = bouton.getAttribute("data-youtube-id");
-      
-      // Construction de l'URL sécurisée YouTube (avec option autoplay activée au clic)
-      iframeVideo.src = `https://youtube-nocookie.com{youtubeId}?autoplay=1&rel=0`;
-      
-      // Affiche la boîte modale
+      // Récupère l'URL complète du HTML et l'injecte directement dans l'iframe
+      iframeVideo.src = bouton.getAttribute("data-video-url");
       videoModal.classList.remove("hidden");
     });
   });
 
-  // Fonction pour fermer la modale et couper la vidéo proprement
   const fermerModale = () => {
     videoModal.classList.add("hidden");
-    iframeVideo.src = ""; // Vide l'iframe pour stopper instantanément la vidéo
+    iframeVideo.src = ""; 
   };
 
   btnFermer.addEventListener("click", fermerModale);
-  
-  // Ferme la modale au clic à l'extérieur de la vidéo (sur l'arrière-plan noir flouté)
-  videoModal.addEventListener("click", (e) => {
-    if (e.target === videoModal) {
-      fermerModale();
-    }
-  });
+  videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
 });
-
-

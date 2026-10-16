@@ -347,27 +347,35 @@ document.querySelectorAll('.open-article').forEach(link => {
 
 // JavaScript Video
 document.addEventListener("DOMContentLoaded", () => {
+  // Sélection de TOUS les boutons qui ont la classe 'btn-regarder'
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
+  
   const videoModal = document.getElementById("video-modal");
   const btnFermer = document.getElementById("btn-fermer");
-  const iframeVideo = document.getElementById("lecteur-video"); // Cible l'iframe
+  const iframeVideo = document.getElementById("lecteur-video");
 
+  // On écoute le clic sur CHAQUE bouton individuellement
   boutonsRegarder.forEach((bouton) => {
     bouton.addEventListener("click", () => {
-      // Récupère l'URL complète définie dans le HTML et l'applique à l'iframe
-      iframeVideo.src = bouton.getAttribute("data-video-url");
+      // Récupère l'ID Google Drive spécifique au bouton cliqué
+      const videoId = bouton.getAttribute("data-video-id");
       
-      // Affiche la modale
+      // Injecte l'URL correspondante dans l'iframe unique
+      iframeVideo.src = `https://google.com{videoId}/preview`;
+      
+      // Ouvre la modale
       videoModal.classList.remove("hidden");
     });
   });
 
+  // Fonction pour fermer la modale et couper la vidéo
   const fermerModale = () => {
     videoModal.classList.add("hidden");
-    iframeVideo.src = ""; // Vide l'iframe pour couper le streaming et le son immédiatement
+    iframeVideo.src = ""; // Coupe le flux vidéo instantanément
   };
 
   btnFermer.addEventListener("click", fermerModale);
+
   videoModal.addEventListener("click", (e) => {
     if (e.target === videoModal) {
       fermerModale();

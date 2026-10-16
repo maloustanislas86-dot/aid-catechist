@@ -349,12 +349,12 @@ document.querySelectorAll('.open-article').forEach(link => {
 document.addEventListener("DOMContentLoaded", () => {
   const boutonsRegarder = document.querySelectorAll(".btn-regarder");
   const videoModal = document.getElementById("video-modal");
-  const btnFermer = document.getElementById("btn-fermer");
   const iframeVideo = document.getElementById("lecteur-video");
+  const btnFermer = document.getElementById("btn-fermer");
 
   boutonsRegarder.forEach((bouton) => {
     bouton.addEventListener("click", () => {
-      // Récupère l'URL complète du HTML et l'injecte directement dans l'iframe
+      // Récupère l'URL /embed/ du HTML et l'injecte dans l'iframe
       iframeVideo.src = bouton.getAttribute("data-video-url");
       videoModal.classList.remove("hidden");
     });
@@ -362,9 +362,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fermerModale = () => {
     videoModal.classList.add("hidden");
-    iframeVideo.src = ""; 
+    iframeVideo.src = ""; // Coupe la vidéo à la fermeture
   };
 
   btnFermer.addEventListener("click", fermerModale);
-  videoModal.addEventListener("click", (e) => { if (e.target === videoModal) fermerModale(); });
 });
+

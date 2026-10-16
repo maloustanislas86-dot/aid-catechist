@@ -346,19 +346,35 @@
 });*/
 
 /* ----------------- Articles ----------------- */
-function toggleModal(show) {
-    const modal = document.getElementById('textModal');
-    if (show) {
+const modal = document.getElementById('globalModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalContent = document.getElementById('modalContent');
+
+  // Écoute le clic sur TOUS les boutons ayant la classe "open-modal-btn"
+  document.querySelectorAll('.open-modal-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      // 1. Récupère les textes stockés dans le bouton cliqué
+      const title = button.getAttribute('data-title');
+      const content = button.getAttribute('data-content');
+
+      // 2. Injecte les textes dans la modale
+      modalTitle.textContent = title;
+      modalContent.innerHTML = content;
+
+      // 3. Affiche la modale
       modal.classList.remove('hidden');
-    } else {
-      modal.classList.add('hidden');
-    }
+    });
+  });
+
+  // Fonction de fermeture
+  function closeGlobalModal() {
+    modal.classList.add('hidden');
   }
 
-  // Fermer la modale si on clique sur l'arrière-plan noir
-  document.getElementById('textModal').addEventListener('click', function(e) {
+  // Ferme si on clique sur le fond noir
+  modal.addEventListener('click', function(e) {
     if (e.target === this) {
-      toggleModal(false);
+      closeGlobalModal();
     }
   });
 

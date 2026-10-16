@@ -202,31 +202,37 @@
         </div>
       </article> -->
 
-      <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
-        <div class="mb-5 flex items-center justify-between"> 
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300"><i data-lucide="file-text" class="h-3.5 w-3.5"></i> Article</span> 
-          <span class="text-xs text-slate-500">1 min de lecture</span> 
-        </div> 
-        <h3 class="font-display text-2xl font-semibold text-white">Guides</h3> 
-        <p class="mt-2 flex-1 text-sm text-slate-400">« Pour la plus grande gloire de Dieu »</p> 
+        <!-- L'article -->
+        <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
+          <div class="mb-5 flex items-center justify-between"> 
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300"><i data-lucide="file-text" class="h-3.5 w-3.5"></i> Article</span> 
+            <span class="text-xs text-slate-500">1 min de lecture</span> 
+          </div> 
+          <h3 class="font-display text-2xl font-semibold text-white">Guides</h3> 
+          <p class="mt-2 flex-1 text-sm text-slate-400">« Pour la plus grande gloire de Dieu »</p> 
+          
+          <!-- Bouton avec une fonction JS directe "onclick" pour éliminer les bugs de script -->
+          <button onclick="toggleModal(true)" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left">
+            <i data-lucide="arrow-right" class="h-4 w-4"></i> Lire
+          </button> 
+        </article>
         
-        <!-- Modification : Remplacement du lien par un bouton de type "button" ou ajout d'un ID/Classe -->
-        <button id="openModalBtn" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left">
-          <i data-lucide="arrow-right" class="h-4 w-4"></i> Lire
-        </button> 
-      </article>
-      
-      <!-- La fenêtre modale (cachée par défaut) -->
-      <dialog id="textModal" class="rounded-2xl border border-white/10 bg-ink-900 p-6 text-white backdrop:bg-black/50 max-w-md w-full shadow-glow">
-        <div class="flex justify-between items-center mb-4">
-          <h3 class="text-xl font-bold text-electric-300">Guides</h3>
-          <button id="closeModalBtn" class="text-slate-400 hover:text-white cursor-pointer bg-transparent border-none text-xl">✕</button>
+        <!-- La fenêtre modale (Modifiée en DIV classique, cachée via 'hidden') -->
+        <div id="textModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <!-- Conteneur de la boîte -->
+          <div class="relative rounded-2xl border border-white/10 bg-ink-900 p-6 text-white max-w-md w-full shadow-2xl">
+            <!-- Entête -->
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-bold text-electric-300">Guides</h3>
+              <button onclick="toggleModal(false)" class="text-slate-400 hover:text-white cursor-pointer bg-transparent border-none text-xl p-1">✕</button>
+            </div>
+            <!-- Contenu texte -->
+            <div class="text-sm text-slate-300 space-y-3">
+              <p><strong>« Ad maiorem Dei gloriam »</strong> est la devise des Jésuites.</p>
+              <p>Ce guide vous explique l'histoire et l'impact de ce mouvement spirituel fondé par Saint Ignace de Loyola...</p>
+            </div>
+          </div>
         </div>
-        <div class="text-sm text-slate-300 space-y-3">
-          <p><strong>« Ad maiorem Dei gloriam »</strong> est la devise des Jésuites.</p>
-          <p>Ce guide vous explique l'histoire et l'impact de ce mouvement spirituel fondé par Saint Ignace de Loyola...</p>
-        </div>
-      </dialog>
           
         <article data-category="livres" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
           <div class="mb-5 flex items-center justify-between">

@@ -373,3 +373,34 @@ document.addEventListener("DOMContentLoaded", () => {
   btnFermer.addEventListener("click", fermerModale);
 });
 
+/* --------------------- Livres -------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Sélection du bouton de téléchargement
+  const downloadButton = document.querySelector('.download-btn');
+
+  if (downloadButton) {
+    // 2. Écoute de l'événement "click"
+    downloadButton.addEventListener('click', (event) => {
+      // Optionnel : Afficher un message temporaire dans la console ou à l'écran
+      console.log('Le téléchargement a démarré !');
+
+      // Exemple d'interaction visuelle : Changer temporairement le texte du bouton
+      const originalText = downloadButton.innerHTML;
+      
+      downloadButton.innerHTML = `<i data-lucide="check" class="h-4 w-4"></i> Merci !`;
+      downloadButton.style.pointerEvents = 'none'; // Empêche les clics multiples
+
+      // Réinitialiser le bouton après 3 secondes
+      setTimeout(() => {
+        downloadButton.innerHTML = originalText;
+        downloadButton.style.pointerEvents = 'auto';
+        
+        // Si vous utilisez Lucide Icons, cette ligne réaffiche la bonne icône
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+      }, 3000);
+    });
+  }
+});
+

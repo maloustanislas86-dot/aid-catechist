@@ -192,42 +192,6 @@
             Lire
           </button> 
         </article>
-      
-        <!-- Article 2 -->
-        <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
-          <div class="mb-5 flex items-center justify-between"> 
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300">Article</span> 
-            <span class="text-xs text-slate-500">1 min de lecture</span> 
-          </div> 
-          <h3 class="font-display text-2xl font-semibold text-white">Dévotions</h3> 
-          <p class="mt-2 flex-1 text-sm text-slate-400">« Le tabernacle où Jésus est présent »</p> 
-          
-          <!-- Bouton avec les données de l'article 2 -->
-          <button 
-            class="open-modal-btn mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left"
-            data-title="Dévotions"
-            data-content="<p> Lorsque nous passons devant le Tabernacle, nous faisons une genoux flexion (si ce n'est pas possible, faisons une inclinaison profonde) et parlons à Jésus avec 
-            des mots tels que « Jésus, je t'adore », « Jésus, je t'aime ».</p>
-            <p> Lorsque nous entrons dans une église, cherchons le Tabernacle où Jésus est présent, nous attendant, et passons 
-            quelques instants en adoration devant le Tabernacle.</p>">
-            Lire
-          </button> 
-        </article>
-      
-      <!-- LA FENÊTRE MODALE UNIQUE POUR TOUT LE SITE -->
-      <div id="globalModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-        <div class="relative rounded-2xl border border-white/10 bg-ink-900 p-6 text-white max-w-md w-full shadow-2xl">
-          <!-- Entête dynamique -->
-          <div class="flex justify-between items-center mb-4">
-            <h3 id="modalTitle" class="text-xl font-bold text-electric-300">Articles</h3>
-            <button onclick="closeGlobalModal()" class="text-slate-400 hover:text-white cursor-pointer bg-transparent border-none text-xl p-1">✕</button>
-          </div>
-          <!-- Contenu dynamique -->
-          <div id="modalContent" class="text-sm text-slate-300 space-y-3">
-            <!-- Le texte HTML de l'article s'injectera ici -->
-          </div>
-        </div>
-      </div>
           
         <article data-category="livres" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
           <div class="mb-5 flex items-center justify-between">
@@ -268,19 +232,26 @@
         </article>
 
         <!-- Article 2 -->
-        <!-- <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
+        <article data-category="articles" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow"> 
           <div class="mb-5 flex items-center justify-between"> 
-            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300"><i data-lucide="file-text" class="h-3.5 w-3.5"></i> Article</span> 
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1 text-xs font-medium text-electric-300">Article</span> 
             <span class="text-xs text-slate-500">1 min de lecture</span> 
           </div> 
-          <h3 class="font-display text-2xl font-semibold text-white">Guides</h3> 
-          <p class="mt-2 flex-1 text-sm text-slate-400">« Pour la plus grande gloire de Dieu »</p> -->
+          <h3 class="font-display text-2xl font-semibold text-white">Dévotions</h3> 
+          <p class="mt-2 flex-1 text-sm text-slate-400">« Le tabernacle où Jésus est présent »</p> 
           
-          <!-- Bouton avec une fonction JS directe "onclick" pour éliminer les bugs de script -->
-         <!-- <button onclick="toggleModal(true)" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left">
-            <i data-lucide="arrow-right" class="h-4 w-4"></i> Lire
+          <!-- Bouton avec les données de l'article 2 -->
+          <button 
+            class="open-modal-btn mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300 cursor-pointer bg-transparent border-none p-0 text-left"
+            data-title="Dévotions"
+            data-content="<p> Lorsque nous passons devant le Tabernacle, nous faisons une genoux flexion (si ce n'est pas possible, faisons une inclinaison profonde) et parlons à Jésus avec 
+            des mots tels que « Jésus, je t'adore », « Jésus, je t'aime ».</p>
+            <p> Lorsque nous entrons dans une église, cherchons le Tabernacle où Jésus est présent, nous attendant, et passons 
+            quelques instants en adoration devant le Tabernacle.</p>">
+            Lire
           </button> 
-        </article> -->
+        </article>
+      
         
         <article data-category="livres" class="group flex flex-col rounded-2xl border border-white/5 bg-ink-900 p-6 transition hover:-translate-y-1 hover:border-electric/40 hover:shadow-glow">
           <div class="mb-5 flex items-center justify-between">
@@ -291,6 +262,21 @@
           <p class="mt-2 flex-1 text-sm text-slate-400">[Insérer texte ici]</p>
           <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-electric hover:text-electric-300"><i data-lucide="download" class="h-4 w-4"></i> Télécharger</a>
         </article>
+
+         <!-- LA FENÊTRE MODALE UNIQUE POUR TOUT LE SITE -->
+        <div id="globalModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <div class="relative rounded-2xl border border-white/10 bg-ink-900 p-6 text-white max-w-md w-full shadow-2xl">
+            <!-- Entête dynamique -->
+            <div class="flex justify-between items-center mb-4">
+              <h3 id="modalTitle" class="text-xl font-bold text-electric-300">Articles</h3>
+              <button onclick="closeGlobalModal()" class="text-slate-400 hover:text-white cursor-pointer bg-transparent border-none text-xl p-1">✕</button>
+            </div>
+            <!-- Contenu dynamique -->
+            <div id="modalContent" class="text-sm text-slate-300 space-y-3">
+              <!-- Le texte HTML de l'article s'injectera ici -->
+            </div>
+          </div>
+        </div>
 
            <!-- LA BOÎTE MODALE YOUTUBE (Unique pour toute la page, cachée par défaut) -->
         <div id="video-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
